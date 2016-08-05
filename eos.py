@@ -35,7 +35,7 @@ class EAPI(object):
         if command_list is None:
             raise TypeError('commands should be a: ["list", "of", "commands"]')
 
-        elif isinstance(command_list, str):
+        elif not isinstance(command_list, list):
             command_list = [command_list]
 
         commands = ['enable'] + command_list
