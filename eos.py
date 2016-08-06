@@ -23,6 +23,11 @@ class EAPI(object):
             raise e
 
     def show_command(self, command='show version'):
+        """
+        Run a single show command
+        :param command: show command to run
+        :return: Dict of command result
+        """
         if not isinstance(command, str):
             raise TypeError('command should be a "string"')
 
@@ -32,6 +37,11 @@ class EAPI(object):
             raise e
 
     def show_commands(self, command_list=None):
+        """
+        Run a list of show commands
+        :param command_list: list of show commands to run
+        :return: List of command results
+        """
         if command_list is None:
             raise TypeError('commands should be a: ["list", "of", "commands"]')
 
