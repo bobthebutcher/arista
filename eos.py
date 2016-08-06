@@ -14,8 +14,8 @@ class EAPI(object):
         self.port = port
         self.timeout = timeout
 
-        self.conn = pyeapi.connect(host=host, username=username, password=password, port=port,
-                                   timeout=timeout)
+        self.conn = pyeapi.connect(host=self.host, username=self.username, password=self.password,
+                                   port=self.port, timeout=self.timeout)
 
         try:
             self.conn.execute('enable')
